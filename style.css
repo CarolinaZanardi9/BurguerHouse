@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #090909;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar{
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #ff9900;
+}
+
+/* BOTÃO */
+
+.btn{
+    background: #ff9900;
+    color: black;
+    padding: 14px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255,153,0,0.4);
+}
+
+/* HERO */
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 8%;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,0.96) 30%,
+            rgba(0,0,0,0.3)
+        ),
+        url("/assets/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-text{
+    max-width: 650px;
+}
+
+.hero-text span{
+    color: #ff9900;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero-text h1{
+    font-size: 6rem;
+    line-height: 0.95;
+    margin: 25px 0;
+}
+
+.hero-text p{
+    color: #d1d1d1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* SECTION */
+
+section{
+    padding: 100px 8%;
+}
+
+/* TITLES */
+
+.title{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.title span{
+    color: #ff9900;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.title h2{
+    font-size: 4rem;
+    margin-top: 10px;
+}
+
+/* PRODUCTS */
+
+.products{
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+/* LANCHE */
+
+.lanche{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    opacity: 0;
+    transform: translateX(150px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.lanche.show{
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+.lanche:nth-child(even){
+    transform: translateX(-150px);
+}
+
+.lanche:nth-child(even).show{
+    transform: translateX(0);
+}
+
+/* TEXT */
+
+.lanche-text{
+    flex: 1;
+}
+
+.lanche-text span{
+    color: #ff9900;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.lanche-text h2{
+    font-size: 5rem;
+    line-height: 1;
+    margin: 25px 0;
+}
+
+.lanche-text p{
+    color: #d1d1d1;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+/* INFO */
+
+.lanche-info{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.lanche-info strong{
+    color: #ff9900;
+    font-size: 3rem;
+}
+
+/* IMAGE */
+
+.lanche-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.lanche-image img{
+    width: 100%;
+    max-width: 550px;
+    filter: drop-shadow(0 0 50px rgba(255,153,0,0.25));
+    transition: 0.5s;
+}
+
+.lanche-image img:hover{
+    transform: scale(1.05);
+}
+
+/* SOBRE */
+
+#sobre{
+    text-align: center;
+}
+
+#sobre p{
+    color: #ccc;
+    max-width: 800px;
+    margin: 30px auto 0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* FOOTER */
+
+footer{
+    background: #050505;
+    padding: 40px 8%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+footer p{
+    color: #999;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 1100px){
+
+    .hero{
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .hero-text h1{
+        font-size: 4.5rem;
+    }
+
+    .lanche{
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .lanche-text h2{
+        font-size: 3.5rem;
+    }
+
+    .lanche-info{
+        justify-content: center;
+    }
+
+}
+
+@media(max-width: 900px){
+
+    .menu{
+        display: none;
+    }
+
+    .hero{
+        padding: 120px 20px;
+    }
+
+    .hero-text h1{
+        font-size: 3.5rem;
+    }
+
+    .title h2{
+        font-size: 2.5rem;
+    }
+
+    .lanche-text h2{
+        font-size: 2.8rem;
+    }
+
+    .lanche-image img{
+        max-width: 380px;
+    }
+
+}
