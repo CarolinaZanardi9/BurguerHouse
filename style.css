@@ -86,7 +86,7 @@ header{
             rgba(0,0,0,0.96) 30%,
             rgba(0,0,0,0.3)
         ),
-        url("/assets/hero.png");
+        url("/assets/banner.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -118,7 +118,7 @@ header{
 /* SECTION */
 
 section{
-    padding: 100px 8%;
+    padding: 100px 4%;
 }
 
 /* TITLES */
@@ -126,6 +126,7 @@ section{
 .title{
     text-align: center;
     margin-bottom: 100px;
+    font-size: 3rem;
 }
 
 .title span{
@@ -135,7 +136,7 @@ section{
 }
 
 .title h2{
-    font-size: 4rem;
+    font-size: 10rem;
     margin-top: 10px;
 }
 
@@ -248,7 +249,7 @@ section{
     max-width: 800px;
     margin: 30px auto 0;
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: 2rem;
 }
 
 /* FOOTER */
