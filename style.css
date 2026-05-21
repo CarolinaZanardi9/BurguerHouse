@@ -6,10 +6,14 @@
     scroll-behavior: smooth;
 }
 
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body{
     background: #090909;
     color: white;
-    overflow-x: hidden;
 }
 
 /* HEADER */
@@ -26,12 +30,14 @@ header{
 }
 
 .navbar{
+    width: 100%;
     max-width: 1400px;
     margin: auto;
-    padding: 20px 40px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
 }
 
 .logo{
@@ -147,18 +153,18 @@ section{
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 20px;
 }
 
 /* LANCHE */
 
 .lanche{
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    gap: 40px;
     opacity: 0;
     transform: translateX(150px);
     transition:
@@ -168,7 +174,6 @@ section{
 
 .lanche.show{
     opacity: 1;
-
     transform: translateX(0);
 }
 
@@ -271,7 +276,6 @@ footer p{
 
     .hero{
         justify-content: center;
-
         text-align: center;
     }
 
@@ -281,7 +285,6 @@ footer p{
 
     .lanche{
         flex-direction: column;
-
         text-align: center;
     }
 
@@ -319,6 +322,74 @@ footer p{
 
     .lanche-image img{
         max-width: 380px;
+    }
+
+}
+
+@media(max-width: 768px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .hero{
+        min-height: 100vh;
+
+        padding: 140px 25px 80px;
+
+        background-position: center right;
+
+        background-size: cover;
+    }
+
+    .hero-text{
+        width: 100%;
+    }
+
+    .hero-text h1{
+        font-size: 3.2rem;
+
+        line-height: 1;
+    }
+
+    .hero-text p{
+        font-size: 1.1rem;
+
+        line-height: 1.8;
+    }
+
+    .navbar{
+        padding: 20px;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        padding: 15px;
+    }
+
+    .logo{
+        font-size: 1.7rem;
+    }
+
+    .btn{
+        padding: 10px 18px;
+
+        font-size: 0.9rem;
+    }
+
+}
+
+@media(max-width:768px){
+
+    header .btn{
+        display: none;
     }
 
 }
